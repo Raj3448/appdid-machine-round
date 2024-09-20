@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:512397496738:android:973fc9c68f8c9d4c6ba2fb",
+        "mobilesdk_app_id": "1:512397496738:android:7213bc2cf21184b96ba2fb",
         "android_client_info": {
-          "package_name": "appdid.app"
+          "package_name": "com.example.mealsapp"
         }
       },
       "oauth_client": [
@@ -29,6 +29,13 @@
             {
               "client_id": "512397496738-9dk6pkelb9qvaejicf7nhsp8gbkthe8s.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "512397496738-b0rfcrlag7e41olt284mdqlm4ap8ebsk.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mealsapp"
+              }
             }
           ]
         }
