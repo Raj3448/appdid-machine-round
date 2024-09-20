@@ -1,8 +1,15 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:mealsapp/feature/category/category_page.dart';
-import 'package:mealsapp/feature/home/homePage.dart';
+import 'package:get_it/get_it.dart';
+import 'package:mealsapp/feature/Auth/auth_screen.dart';
+import 'package:mealsapp/feature/Auth/store/auth_store.dart';
 
-void main() {
+final getIt = GetIt.instance;
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  getIt.registerSingleton<AuthStore>(AuthStore());
+  await getIt<AuthStore>().checkLoginStatus();
   runApp(const MyApp());
 }
 
@@ -17,7 +24,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home:  AuthScreen(),
       
     );
   }
